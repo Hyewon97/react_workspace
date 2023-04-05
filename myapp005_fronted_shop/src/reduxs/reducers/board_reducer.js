@@ -27,6 +27,17 @@ const boardSlice = createSlice({
 
       state.pv = action.payload.data.pv;
     },
+
+    //action에서 사용할 때 boardReducers.getBoardDetail 이렇게 사용할 수 있음
+    getBoardDetail(state, action) {
+      state.boardDetail = action.payload.data;
+    },
+
+    // 첨부파일 다운로드
+    // 꼭 store에 저장해서 넘기지 않아도 됨 component 하나에서만 사용되므로
+    // getBoardDownload(state, action) {
+    //   state.boardFile = action.payload.data;
+    // },
   },
 });
 

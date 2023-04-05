@@ -15,13 +15,20 @@ const PageNavigation = ({ getBoardList }) => {
     <nav arial-label="...">
       <ul className="pagination">
         <li className={pv.startPage <= 1 ? "page-item disabled" : "page=item"}>
-          <a
+          {/* url #!가 싫으면 a 대신 span 사용하기 */}
+          {/* <a
             href="#!"
             className="page-link"
             onClick={() => getBoardList(pv.startPage - pv.blockPage)}
           >
             &laquo;
-          </a>
+          </a> */}
+          <span
+            className="page-link"
+            onClick={() => getBoardList(pv.startPage - pv.blockPage)}
+          >
+            &laquo;
+          </span>
         </li>
 
         {/* 반복문 사용해서 페이지 출력 */}
@@ -29,14 +36,17 @@ const PageNavigation = ({ getBoardList }) => {
         {/* 필요한 스타일 있으면 부트스트랩에서 넣으시라 */}
         {pageNumbers.map((pnum, idx) => (
           <li
+            key={pnum}
             className={pv.currentPage === pnum ? "page-item active" : null}
             aria-current={pv.currentPage === pnum ? "page" : null}
-            key={pnum}
           >
             {/* 클릭이란 이벤트가 발생되면 해당 페이지로 이동하라 */}
-            <a href="#!" onClick={() => getBoardList(pnum)}>
+            {/* <a href="#!" onClick={() => getBoardList(pnum)}>
               <span className="page-link">{pnum}</span>
-            </a>
+            </a> */}
+            <span className="page-link" onClick={() => getBoardList(pnum)}>
+              {pnum}
+            </span>
           </li>
         ))}
 
@@ -45,13 +55,19 @@ const PageNavigation = ({ getBoardList }) => {
             pv.endPage >= pv.totalPage ? "page-item disabled" : "page-item"
           }
         >
-          <a
+          {/* <a
             href="#!"
             className="page-link"
             onClick={() => getBoardList(pv.startPage + pv.blockPage)}
           >
             &raquo;
-          </a>
+          </a> */}
+          <span
+            className="page-link"
+            onClick={() => getBoardList(pv.startPage + pv.blockPage)}
+          >
+            &raquo;
+          </span>
         </li>
       </ul>
     </nav>
