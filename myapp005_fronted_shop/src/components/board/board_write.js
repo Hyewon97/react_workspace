@@ -41,12 +41,19 @@ const BoardWrite = () => {
     setInputs({ ...inputs, [e.target.name]: e.target.files[0] }); //files가 collection이라 [0]이라고 해야 원하는 값을 가져올 수 있다.
   };
 
+  // const handleFileChange = (e) => {
+  //   e.preventDefault();
+  //   setInputs({ [e.target.name]: e.target.files[0] }); //files가 collection이라 [0]이라고 해야 원하는 값을 가져올 수 있다.
+  // };
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData();
     formData.append("subject", subject);
     formData.append("content", content);
+    formData.append("memberEmail", localStorage.getItem("memberEmail"));
+
     console.log("filename", filename); // 첨부파일은 이름만 찍어봄
     //js 구현하는 부분이라서 if문 사용가능
     // 선택한 첨부파일이 있으면!
@@ -61,8 +68,13 @@ const BoardWrite = () => {
     }
 
     const config = {
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: localStorage.getItem("Authorization"),
+      },
     };
+
+    console.log(localStorage.getItem("Authorization"));
 
     await dispatch(boardActions.getBoardWrite(formData, config));
 
@@ -85,6 +97,18 @@ const BoardWrite = () => {
       <form onSubmit={onSubmit}>
         <table>
           <tbody>
+            <tr>
+              <td>글쓴이</td>
+              <td>
+                <input
+                  type="type"
+                  readOnly
+                  value={localStorage.getItem("memberName")}
+                  name="memberName"
+                />
+              </td>
+            </tr>
+
             <tr>
               <td width="20%" align="center">
                 제목

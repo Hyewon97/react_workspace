@@ -50,7 +50,10 @@ const BoardUpdate = () => {
     if (filename != null) formData.append("filename", filename);
 
     const config = {
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: localStorage.getItem("Authorization"),
+      },
     };
 
     await dispatch(boardActions.getBoardUpdate(formData, config));
@@ -84,7 +87,9 @@ const BoardUpdate = () => {
           <tbody>
             <tr>
               <th width="20%">글쓴이</th>
-              <td>{board.writer}</td>
+              <td>
+                {board["membersDTO"] ? board["membersDTO"]["memberName"] : null}
+              </td>
               <th width="20%">등록일</th>
               <td>{board.reg_date}</td>
             </tr>

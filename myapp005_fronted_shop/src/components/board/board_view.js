@@ -14,11 +14,16 @@ const BoardView = () => {
 
   const pv = useSelector((state) => state.board.pv);
 
+  const config = {
+    headers: {
+      Authorization: localStorage.getItem("Authorization"),
+    },
+  };
   //action에 있는 boardDetail 불러올 예정
   // 맨 마지막에 처리됨
   useEffect(() => {
-    dispatch(boardActions.getBoardDetail(num));
-  }, []);
+    dispatch(boardActions.getBoardDetail(num, config));
+  }, [dispatch, num]);
 
   // download
   // 동기화를 위해 async와 await를 사용해 감싸줬지만 안써도 가능
@@ -50,7 +55,7 @@ const BoardView = () => {
 
   const handleDelete = (e) => {
     e.preventDefault();
-    dispatch(boardActions.getBoardDelete(num));
+    dispatch(boardActions.getBoardDelete(num, config));
     // 삭제후 리스트 페이지로 이동하는 작업
     navigator(`/board/list/${pv.currentPage}`);
   };
@@ -62,7 +67,11 @@ const BoardView = () => {
         <tbody>
           <tr>
             <th width="20%">글쓴이</th>
-            <td>{boardDetail.reg_date}</td>
+            <td>
+              {boardDetail["membersDTO"]
+                ? boardDetail["membersDTO"]["memberName"]
+                : null}
+            </td>
             <th width="20%">조회수</th>
             <td>{boardDetail.readcount}</td>
           </tr>
@@ -104,13 +113,18 @@ const BoardView = () => {
         답변
       </Link>
 
-      <Link className="btn btn-primary" to={`/board/update/${num}`}>
-        수정
-      </Link>
+      {localStorage.getItem("memberEmail") ===
+      (boardDetail["memberEmail"] ? boardDetail["memberEmail"] : null) ? (
+        <>
+          <Link className="btn btn-primary" to={`/board/update/${num}`}>
+            수정
+          </Link>
 
-      <button className="btn btn-primary" onClick={handleDelete}>
-        삭제
-      </button>
+          <button className="btn btn-primary" onClick={handleDelete}>
+            삭제
+          </button>
+        </>
+      ) : null}
     </div>
   );
 };

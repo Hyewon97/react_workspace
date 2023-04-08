@@ -24,6 +24,28 @@ const LoginPage = () => {
       .post(`${baseURL}/login`, inputs, config) // 비번 유출 방지
       .then((response) => {
         console.log("responese :", response.data);
+
+        let jwtToken = response.headers.get("Authorization");
+        console.log(jwtToken);
+
+        let jwtMemberName = response.data.memberName;
+        let jwtMemberEmail = response.data.memberEmail;
+        let jwtAuthRole = response.data.authRole;
+
+        localStorage.setItem("Authorization", jwtToken);
+        localStorage.setItem("memberEmail", jwtMemberEmail);
+        localStorage.setItem("memberName", jwtMemberName);
+        localStorage.setItem("authRole", jwtAuthRole);
+        localStorage.setItem("isLogin", "true");
+
+        setInputs({ memberEmail: "", memberPass: "" });
+      })
+      .then((response) => {
+        // navigator('/');
+        window.location.replace("/");
+      })
+      .catch((err) => {
+        console.error(err.message);
       });
   };
 

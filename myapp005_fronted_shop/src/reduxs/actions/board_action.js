@@ -18,11 +18,11 @@ function getBoardList(currentPage) {
   };
 }
 
-function getBoardDetail(num) {
+function getBoardDetail(num, config) {
   return async (dispatch) => {
     //data 값을 reduce를 이용해서 store에 저장해야함
     const data = await axios
-      .get(`${baseURL}/board/view/${num}`)
+      .get(`${baseURL}/board/view/${num}`, config)
       .then((response) => response.data); // backend에서 /board/view/ 이렇게 요청하도록 되어있어서 이렇게 주소를 써줌 -> 결과값을 받아옴 .then()
     dispatch(boardReducers.getBoardDetail({ data }));
   };
@@ -42,10 +42,10 @@ function getBoardDownload(upload) {
   };
 }
 
-function getBoardDelete(num) {
+function getBoardDelete(num, config) {
   return async (dispatch) => {
     await axios
-      .delete(`${baseURL}/board/delete/${num}`)
+      .delete(`${baseURL}/board/delete/${num}`, config)
       .then((response) => response.data);
   };
 }
