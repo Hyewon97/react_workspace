@@ -1,3 +1,28 @@
-* {
-  background-color: #dddddd;
+.pageboder {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.test {
+  width: 100px;
+}
+
+.nav_bar {
+  width: 1200px;
+  float: left;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+.nav_bar li {
+  float: left;
+  list-style: none;
+}
+
+.test {
+  position: absolute;
+  right: 10px;
 }

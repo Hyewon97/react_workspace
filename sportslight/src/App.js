@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import BaseLayout from "./components/layout/BaseLayout";
 import Login from "./components/memberz/login";
 import Signup from "./components/memberz/signup";
@@ -22,7 +23,7 @@ import MyPage from "./components/memberz/mypage";
 
 function App() {
   return (
-    <div>
+    <div className="pageboder">
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Login />} />

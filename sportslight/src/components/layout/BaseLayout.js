@@ -2,37 +2,57 @@ import { NavLink, Outlet } from "react-router-dom";
 function BaseLayout() {
   return (
     <div>
-      <nav>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         {/* 헤더 */}
-        <div>
-          <>
-            <NavLink to="/main">
+
+        <div className="container-fluid">
+          <div className="nav-item">
+            <NavLink className="nav-link" to="/main">
               <img src="/images/logo.png" height="50rem" width="120rem" />
             </NavLink>
-          </>
-          <ul>
-            <li>
-              <NavLink to="/category">리그영상</NavLink>
-            </li>
+          </div>
+          <div className="nav_bar">
+            <ul>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/category">
+                  리그영상
+                </NavLink>
+              </li>
 
-            <li>
-              <NavLink to="/schedule">경기일정</NavLink>
-            </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/schedule">
+                  경기일정
+                </NavLink>
+              </li>
 
-            <li>
-              <NavLink to="/talklist">커뮤니티</NavLink>
-            </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/talklist">
+                  커뮤니티
+                </NavLink>
+              </li>
+            </ul>
+            <div className="test">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  검색
+                </NavLink>
+              </li>
 
-            <li>검색</li>
-
-            <li>
-              <NavLink to="/mypage">MyPage</NavLink>
-            </li>
-          </ul>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/mypage">
+                  MyPage
+                </NavLink>
+              </li>
+            </div>
+          </div>
         </div>
-        {/* 헤더 끝 */}
+      </nav>
 
-        {/* 카테고리 영역. 추후에 지울거임 */}
+      {/* 헤더 끝 */}
+
+      {/* 카테고리 영역. 추후에 지울거임 */}
+      <details>
+        <summary>url 이동 보려면 클릭하세요</summary>
         <div>
           <ul>
             <li>회원정보 관련</li>
@@ -132,8 +152,8 @@ function BaseLayout() {
             </li>
           </ul>
         </div>
-        {/* 카테고리 영역 끝 */}
-      </nav>
+      </details>
+      {/* 카테고리 영역 끝 */}
 
       <hr />
       <Outlet />
