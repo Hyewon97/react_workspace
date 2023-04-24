@@ -9,12 +9,12 @@ import BoardList from "./components/board/board_list";
 import BoardView from "./components/board/board_view";
 import BoardWrite from "./components/board/board_write";
 import BoardUpdate from "./components/board/board_update";
-import JoinAdd from "./components/members/join_add";
-import LoginPage from "./components/members/login";
-import LogOut from "./components/members/logout";
+import JoinAdd from "./components/adminz/join_add";
+import LoginPage from "./components/adminz/login";
+import LogOut from "./components/adminz/logout";
 import PrivateRoute from "./access/PrivateRoute";
 import Talklist from "./components/talk/talk_list";
-import EditInfo from "./components/members/editinfo";
+import Update from "./components/adminz/update";
 
 function App() {
   return (
@@ -23,20 +23,20 @@ function App() {
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Home />} />
           <Route
-            path="editinfo"
-            element={<PrivateRoute isAuth={true} RouteComponent={EditInfo} />}
+            path="admin/update"
+            element={<PrivateRoute isAuth={true} RouteComponent={Update} />}
           />
 
           <Route
-            path="logout"
+            path="admin/logout"
             element={<PrivateRoute isAuth={true} RouteComponent={LogOut} />}
           />
           <Route
-            path="login"
+            path="admin/login"
             element={<PrivateRoute isAuth={false} RouteComponent={LoginPage} />}
           />
           <Route
-            path="joinadd"
+            path="admin/signup"
             element={<PrivateRoute isAuth={false} RouteComponent={JoinAdd} />}
           />
 

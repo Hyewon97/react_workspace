@@ -17,7 +17,7 @@ const JoinAdd = () => {
     // axios 처리... 리덕스로 처리 안함
     e.preventDefault();
     await axios
-      .post(`${baseURL}/member/signup`, adminz, config)
+      .post(`${baseURL}/admin/signup`, adminz, config)
       .then((response) => {
         setAdminz({
           adminEmail: "",

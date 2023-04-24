@@ -22,7 +22,7 @@ function BaseLayout() {
                   <NavLink
                     style={activeStyle}
                     className="nav-link"
-                    to="/editinfo"
+                    to="admin/update"
                   >
                     EDITINFO
                   </NavLink>
@@ -32,7 +32,7 @@ function BaseLayout() {
                   <NavLink
                     style={activeStyle}
                     className="nav-link"
-                    to="/logout"
+                    to="admin/logout"
                   >
                     {localStorage.getItem("adminProfile") + "LOGOUT"}
                   </NavLink>
@@ -41,7 +41,11 @@ function BaseLayout() {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink style={activeStyle} className="nav-link" to="/login">
+                  <NavLink
+                    style={activeStyle}
+                    className="nav-link"
+                    to="admin/login"
+                  >
                     LOGIN
                   </NavLink>
                 </li>
@@ -50,7 +54,7 @@ function BaseLayout() {
                   <NavLink
                     style={activeStyle}
                     className="nav-link"
-                    to="/joinadd"
+                    to="admin/signup"
                   >
                     JOIN
                   </NavLink>
