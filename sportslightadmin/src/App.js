@@ -15,6 +15,10 @@ import LogOut from "./components/adminz/logout";
 import PrivateRoute from "./access/PrivateRoute";
 import Talklist from "./components/talk/talk_list";
 import Update from "./components/adminz/update";
+import NoticeList from "./components/notice/notice_list";
+import NoticeWrite from "./components/notice/notice_write";
+import NoticeView from "./components/notice/notice_view";
+import NoticeUpdate from "./components/notice/notice_update";
 
 function App() {
   return (
@@ -40,6 +44,7 @@ function App() {
             element={<PrivateRoute isAuth={false} RouteComponent={JoinAdd} />}
           />
 
+          {/* 보드 */}
           <Route
             path="board/list/:currentPage"
             element={<PrivateRoute isAuth={false} RouteComponent={BoardList} />}
@@ -62,6 +67,35 @@ function App() {
               <PrivateRoute isAuth={true} RouteComponent={BoardUpdate} />
             }
           />
+
+          {/* 공지사항 */}
+          <Route
+            path="admin/notice/list/:currentPage"
+            element={
+              <PrivateRoute isAuth={false} RouteComponent={NoticeList} />
+            }
+          />
+
+          <Route
+            path="/admin/notice/view/:num"
+            element={<PrivateRoute isAuth={true} RouteComponent={NoticeView} />}
+          />
+
+          <Route
+            path="/admin/notice/update/:num"
+            element={
+              <PrivateRoute isAuth={true} RouteComponent={NoticeUpdate} />
+            }
+          />
+
+          <Route
+            path="/admin/notice/write"
+            element={
+              <PrivateRoute isAuth={true} RouteComponent={NoticeWrite} />
+            }
+          />
+
+          {/*  */}
 
           <Route
             path="talk/list/"

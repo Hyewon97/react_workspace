@@ -76,6 +76,16 @@ function BaseLayout() {
                 TALK
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink
+                style={activeStyle}
+                className="nav-link"
+                to="/admin/notice/list/1"
+              >
+                NOTICE
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

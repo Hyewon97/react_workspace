@@ -10,8 +10,9 @@ const PrivateRoute = ({ isAuth, RouteComponent }) => {
   }
 
   // 인증이 반드시 필요한 페이지이고 인증이 안된 페이지
+  // 인증이 안된상태에서 접근했을 때 보내지는 주소
   else if (isAuth && !isLogin) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/admin/login" />;
   }
 
   //인증이 필요하지 않은 페이지
