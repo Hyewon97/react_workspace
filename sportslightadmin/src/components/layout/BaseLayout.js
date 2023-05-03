@@ -86,6 +86,16 @@ function BaseLayout() {
                 NOTICE
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink
+                style={activeStyle}
+                className="nav-link"
+                to="/admin/member/list/1"
+              >
+                회원관리
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

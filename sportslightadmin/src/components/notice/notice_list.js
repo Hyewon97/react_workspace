@@ -30,7 +30,7 @@ const NoticeList = () => {
       <Link className="btn btn-danger" to="/admin/notice/write">
         글쓰기
       </Link>
-      <h3 className="text-center">게시판 목록</h3>
+      <h3 className="text-center">공지사항 목록</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <colgroup>
           <col width="8%" />

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 
-const PageNavigation = ({ getNoticeList }) => {
+const PageNavigation = ({ getMemberzList }) => {
   const pv = useSelector((state) =>
-    state.notice.pv ? state.notice.pv : { currentPage: 1 }
+    state.memberz.pv ? state.memberz.pv : { currentPage: 1 }
   );
 
   const pageNumbers = [];
@@ -16,7 +16,7 @@ const PageNavigation = ({ getNoticeList }) => {
         <li className={pv.startPage <= 1 ? "page-item disabled" : "page-item"}>
           <span
             className="page-link"
-            onClick={() => getNoticeList(pv.startPage - pv.blockPage)}
+            onClick={() => getMemberzList(pv.startPage - pv.blockPage)}
           >
             &laquo;
           </span>
@@ -28,7 +28,7 @@ const PageNavigation = ({ getNoticeList }) => {
             className={pv.currentPage === pnum ? "page-item active" : null}
             aria-current={pv.currentPage === pnum ? "page" : null}
           >
-            <span className="page-link" onClick={() => getNoticeList(pnum)}>
+            <span className="page-link" onClick={() => getMemberzList(pnum)}>
               {pnum}
             </span>
           </li>
@@ -36,12 +36,12 @@ const PageNavigation = ({ getNoticeList }) => {
 
         <li
           className={
-            pv.endPage >= pv.totalPage ? "page-item disabled" : "page-item"
+            pv.endPage > pv.totalPage ? "page-item disabled" : "page-item"
           }
         >
           <span
             className="page-link"
-            onClick={() => getNoticeList(pv.startPage + pv.blockPage)}
+            onClick={() => getMemberzList(pv.startPage + pv.blockPage)}
           >
             &raquo;
           </span>

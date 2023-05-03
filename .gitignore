@@ -1,0 +1,8 @@
+/.metadata/
+
+## 확장자 무시
+*.zip
+
+## 폴더 무시
+test/
+backup/

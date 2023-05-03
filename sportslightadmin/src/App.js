@@ -19,6 +19,7 @@ import NoticeList from "./components/notice/notice_list";
 import NoticeWrite from "./components/notice/notice_write";
 import NoticeView from "./components/notice/notice_view";
 import NoticeUpdate from "./components/notice/notice_update";
+import memberzList from "./components/memberz/memberz_list";
 
 function App() {
   return (
@@ -82,7 +83,7 @@ function App() {
           />
 
           <Route
-            path="/admin/notice/update/:num"
+            path="/admin/notice/update/:noticeNum"
             element={
               <PrivateRoute isAuth={true} RouteComponent={NoticeUpdate} />
             }
@@ -95,11 +96,18 @@ function App() {
             }
           />
 
-          {/*  */}
-
+          {/*  토크 게시판*/}
           <Route
             path="talk/list/"
             element={<PrivateRoute isAuth={false} RouteComponent={Talklist} />}
+          />
+
+          {/*  회원 정보 관리*/}
+          <Route
+            path="/admin/member/list/:currentPage"
+            element={
+              <PrivateRoute isAuth={false} RouteComponent={memberzList} />
+            }
           />
         </Route>
       </Routes>
