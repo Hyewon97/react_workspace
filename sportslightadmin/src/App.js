@@ -5,10 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BaseLayout from "./components/layout/BaseLayout";
 
 import Home from "./components/home";
-import BoardList from "./components/board/board_list";
-import BoardView from "./components/board/board_view";
-import BoardWrite from "./components/board/board_write";
-import BoardUpdate from "./components/board/board_update";
 import JoinAdd from "./components/adminz/join_add";
 import LoginPage from "./components/adminz/login";
 import LogOut from "./components/adminz/logout";
@@ -20,6 +16,10 @@ import NoticeWrite from "./components/notice/notice_write";
 import NoticeView from "./components/notice/notice_view";
 import NoticeUpdate from "./components/notice/notice_update";
 import memberzList from "./components/memberz/memberz_list";
+import VideoList from "./components/video/video_list";
+import VideoUpdate from "./components/video/video_update";
+import VideoView from "./components/video/video_view";
+import VideoBoard from "./components/video/video_board";
 
 function App() {
   return (
@@ -43,30 +43,6 @@ function App() {
           <Route
             path="admin/signup"
             element={<PrivateRoute isAuth={false} RouteComponent={JoinAdd} />}
-          />
-
-          {/* 보드 */}
-          <Route
-            path="board/list/:currentPage"
-            element={<PrivateRoute isAuth={false} RouteComponent={BoardList} />}
-          />
-          <Route
-            path="board/view/:num"
-            element={<PrivateRoute isAuth={true} RouteComponent={BoardView} />}
-          />
-          <Route
-            path="board/write"
-            element={<PrivateRoute isAuth={true} RouteComponent={BoardWrite} />}
-          />
-          <Route
-            path="board/write/:num"
-            element={<PrivateRoute isAuth={true} RouteComponent={BoardWrite} />}
-          />
-          <Route
-            path="board/update/:num"
-            element={
-              <PrivateRoute isAuth={true} RouteComponent={BoardUpdate} />
-            }
           />
 
           {/* 공지사항 */}
@@ -107,6 +83,31 @@ function App() {
             path="/admin/member/list/:currentPage"
             element={
               <PrivateRoute isAuth={false} RouteComponent={memberzList} />
+            }
+          />
+
+          {/*  비디오 관련 관리*/}
+          <Route
+            path="/admin/video/list/:currentPage"
+            element={<PrivateRoute isAuth={false} RouteComponent={VideoList} />}
+          />
+
+          <Route
+            path="/admin/video/view/:videoNum"
+            element={<PrivateRoute isAuth={false} RouteComponent={VideoView} />}
+          />
+
+          <Route
+            path="/admin/video/update/:videoNum"
+            element={
+              <PrivateRoute isAuth={false} RouteComponent={VideoUpdate} />
+            }
+          />
+
+          <Route
+            path="/admin/video/board/:videoNum"
+            element={
+              <PrivateRoute isAuth={false} RouteComponent={VideoBoard} />
             }
           />
         </Route>

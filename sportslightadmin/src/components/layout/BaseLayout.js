@@ -61,15 +61,6 @@ function BaseLayout() {
                 </li>
               </>
             )}
-            <li className="nav-item">
-              <NavLink
-                style={activeStyle}
-                className="nav-link"
-                to="/board/list/1"
-              >
-                BOARD
-              </NavLink>
-            </li>
 
             <li className="nav-item">
               <NavLink style={activeStyle} className="nav-link" to="/talk/list">
@@ -94,6 +85,26 @@ function BaseLayout() {
                 to="/admin/member/list/1"
               >
                 회원관리
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                style={activeStyle}
+                className="nav-link"
+                to="/admin/video/list/1"
+              >
+                비디오 관리
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                style={activeStyle}
+                className="nav-link"
+                to="/admin/video/board/1"
+              >
+                비디오 댓글
               </NavLink>
             </li>
           </ul>
