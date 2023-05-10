@@ -19,7 +19,7 @@ import memberzList from "./components/memberz/memberz_list";
 import VideoList from "./components/video/video_list";
 import VideoUpdate from "./components/video/video_update";
 import VideoView from "./components/video/video_view";
-import VideoBoard from "./components/video/video_board";
+import VideoBoardList from "./components/videoBoard/videoBoard_list";
 
 function App() {
   return (
@@ -105,9 +105,9 @@ function App() {
           />
 
           <Route
-            path="/admin/video/board/:videoNum"
+            path="/admin/videoBoard/list/:currentVideoNum/:currentPage"
             element={
-              <PrivateRoute isAuth={false} RouteComponent={VideoBoard} />
+              <PrivateRoute isAuth={false} RouteComponent={VideoBoardList} />
             }
           />
         </Route>

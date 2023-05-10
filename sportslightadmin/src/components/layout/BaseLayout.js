@@ -97,16 +97,6 @@ function BaseLayout() {
                 비디오 관리
               </NavLink>
             </li>
-
-            <li className="nav-item">
-              <NavLink
-                style={activeStyle}
-                className="nav-link"
-                to="/admin/video/board/1"
-              >
-                비디오 댓글
-              </NavLink>
-            </li>
           </ul>
         </div>
       </nav>
