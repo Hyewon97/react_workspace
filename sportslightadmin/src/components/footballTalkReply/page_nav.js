@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 
-const PageNavigation = ({ getVideoList }) => {
+const PageNavigation = ({ getFootballTalkReplyList }) => {
   const pv = useSelector((state) =>
-    state.video.pv ? state.video.pv : { currentPage: 1 }
+    state.footballTalkReply.pv ? state.footballTalkReply.pv : { currentPage: 1 }
   );
 
   const pageNumbers = [];
@@ -16,7 +16,9 @@ const PageNavigation = ({ getVideoList }) => {
         <li className={pv.startPage <= 1 ? "page-item disabled" : "page-item"}>
           <span
             className="page-link"
-            onClick={() => getVideoList(pv.startPage - pv.blockPage)}
+            onClick={() =>
+              getFootballTalkReplyList(pv.startPage - pv.blockPage)
+            }
           >
             &laquo;
           </span>
@@ -28,7 +30,10 @@ const PageNavigation = ({ getVideoList }) => {
             className={pv.currentPage === pnum ? "page-item active" : null}
             aria-current={pv.currentPage === pnum ? "page" : null}
           >
-            <span className="page-link" onClick={() => getVideoList(pnum)}>
+            <span
+              className="page-link"
+              onClick={() => getFootballTalkReplyList(pnum)}
+            >
               {pnum}
             </span>
           </li>
@@ -36,12 +41,14 @@ const PageNavigation = ({ getVideoList }) => {
 
         <li
           className={
-            pv.endPage > pv.totalPage ? "page-item disabled" : "page-item"
+            pv.endPage >= pv.totalPage ? "page-item disabled" : "page-item"
           }
         >
           <span
             className="page-link"
-            onClick={() => getVideoList(pv.startPage + pv.blockPage)}
+            onClick={() =>
+              getFootballTalkReplyList(pv.startPage + pv.blockPage)
+            }
           >
             &raquo;
           </span>

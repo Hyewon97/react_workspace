@@ -13,20 +13,20 @@ function getVideoBoardList(currentPage, currentVideoNum) {
   };
 }
 
-function getVideoBoardDelete(videoBoardNum, config) {
-  return async (dispatch) => {
-    await axios
-      .delete(
-        `${baseURL}/admin/videoBoard/list/delete/${videoBoardNum}`,
-        config
-      )
-      .then((response) => response.data);
-  };
-}
+// function getVideoBoardDelete(videoBoardNum, config) {
+//   return async (dispatch) => {
+//     await axios
+//       .delete(
+//         `${baseURL}/admin/videoBoard/list/delete/${videoBoardNum}`,
+//         config
+//       )
+//       .then((response) => response.data);
+//   };
+// }
 
 export const videoBoardActions = {
   getVideoBoardList,
   getCurrentVideoBoardList: (currentVideoNum) =>
     getVideoBoardList(1, currentVideoNum),
-  getVideoBoardDelete,
+  // getVideoBoardDelete,
 };

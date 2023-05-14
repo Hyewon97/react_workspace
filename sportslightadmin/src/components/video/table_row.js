@@ -43,7 +43,8 @@ const TableRow = (props) => {
         </Link>
       </td>
 
-      <td>{video.videoType}</td>
+      <td>{video.videoType === "l" ? "영상" : "쇼츠"}</td>
+
       <td>
         {/* <button className="btn btn-outline-danger" onClick={linkToComments}>
           이동
@@ -54,7 +55,7 @@ const TableRow = (props) => {
         >
           이동
         </button> */}
-        <button className="btn btn-outline-danger" onClick={linkToComments}>
+        <button className="btn btn-outline-info" onClick={linkToComments}>
           이동
         </button>
       </td>

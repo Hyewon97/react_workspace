@@ -39,7 +39,7 @@ const VideoBoardList = () => {
           <col width="8%" />
           <col width="8%" />
           <col width="*%" />
-          <col width="12%" />
+          <col width="8%" />
         </colgroup>
 
         <thead>
@@ -65,7 +65,7 @@ const VideoBoardList = () => {
         </tbody>
       </table>
 
-      {pv ? <PageNavigation getMemberzList={getVideoBoardList} /> : ""}
+      {pv ? <PageNavigation getVideoBoardList={getVideoBoardList} /> : ""}
     </div>
   );
 };

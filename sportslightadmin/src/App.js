@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // 부트 스트랩 임포트
+
 import BaseLayout from "./components/layout/BaseLayout";
 
 import Home from "./components/home";
@@ -9,7 +10,6 @@ import JoinAdd from "./components/adminz/join_add";
 import LoginPage from "./components/adminz/login";
 import LogOut from "./components/adminz/logout";
 import PrivateRoute from "./access/PrivateRoute";
-import Talklist from "./components/talk/talk_list";
 import Update from "./components/adminz/update";
 import NoticeList from "./components/notice/notice_list";
 import NoticeWrite from "./components/notice/notice_write";
@@ -20,6 +20,8 @@ import VideoList from "./components/video/video_list";
 import VideoUpdate from "./components/video/video_update";
 import VideoView from "./components/video/video_view";
 import VideoBoardList from "./components/videoBoard/videoBoard_list";
+import FootballTalklist from "./components/footballTalk/talk_list";
+import FootballTalkReplyList from "./components/footballTalkReply/talkReply_list";
 
 function App() {
   return (
@@ -74,8 +76,21 @@ function App() {
 
           {/*  토크 게시판*/}
           <Route
-            path="talk/list/"
-            element={<PrivateRoute isAuth={false} RouteComponent={Talklist} />}
+            path="/admin/footballTalk/list/:currentPage"
+            element={
+              <PrivateRoute isAuth={false} RouteComponent={FootballTalklist} />
+            }
+          />
+
+          {/* 공사중 */}
+          <Route
+            path="/admin/footballTalkReply/list/:currentTalkNum/:currentPage"
+            element={
+              <PrivateRoute
+                isAuth={false}
+                RouteComponent={FootballTalkReplyList}
+              />
+            }
           />
 
           {/*  회원 정보 관리*/}

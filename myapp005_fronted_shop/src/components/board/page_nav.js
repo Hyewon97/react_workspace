@@ -12,17 +12,9 @@ const PageNavigation = ({ getBoardList }) => {
   }
 
   return (
-    <nav arial-label="...">
-      <ul className="pagination">
+    <nav arial-label="Page navigation example">
+      <ul className="pagination justify-content-center">
         <li className={pv.startPage <= 1 ? "page-item disabled" : "page=item"}>
-          {/* url #!가 싫으면 a 대신 span 사용하기 */}
-          {/* <a
-            href="#!"
-            className="page-link"
-            onClick={() => getBoardList(pv.startPage - pv.blockPage)}
-          >
-            &laquo;
-          </a> */}
           <span
             className="page-link"
             onClick={() => getBoardList(pv.startPage - pv.blockPage)}

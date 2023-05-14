@@ -4,6 +4,14 @@ import { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import TableRow from "./table_row";
 import PageNavigation from "./page_nav";
+// import {
+//   ArchiveFill,
+//   MicFill,
+//   CameraVideo,
+//   Inboxes,
+//   Bell,
+//   PersonCircle,
+// } from "react-bootstrap-icons";
 
 const MemberzList = () => {
   const dispatch = useDispatch();
@@ -28,11 +36,12 @@ const MemberzList = () => {
   return (
     <div>
       <h3 className="text-center">회원 목록</h3>
+      {/* <ArchiveFill /> 아이콘 출력 시도했는데 안됨.. 쩝 */}
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <colgroup>
-          <col width="8%" />
+          <col width="10%" />
           <col width="*%" />
-          <col width="12%" />
+          <col width="30%" />
           <col width="12%" />
           <col width="12%" />
           <col width="12%" />

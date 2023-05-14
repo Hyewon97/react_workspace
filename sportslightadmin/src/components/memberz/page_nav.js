@@ -11,8 +11,8 @@ const PageNavigation = ({ getMemberzList }) => {
   }
 
   return (
-    <nav arial-label="...">
-      <ul className="pagination">
+    <nav arial-label="Page navigation example">
+      <ul className="pagination justify-content-center">
         <li className={pv.startPage <= 1 ? "page-item disabled" : "page-item"}>
           <span
             className="page-link"

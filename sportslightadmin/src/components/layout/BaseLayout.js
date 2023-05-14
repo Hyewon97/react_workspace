@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 function BaseLayout() {
+  // nav 선택했을 때, 스타일 변경
   const activeStyle = ({ isActive }) => ({
     color: isActive ? "green" : "",
     fontSize: isActive ? "1.2rem" : "",
@@ -63,7 +64,11 @@ function BaseLayout() {
             )}
 
             <li className="nav-item">
-              <NavLink style={activeStyle} className="nav-link" to="/talk/list">
+              <NavLink
+                style={activeStyle}
+                className="nav-link"
+                to="/admin/footballTalk/list/1"
+              >
                 TALK
               </NavLink>
             </li>
