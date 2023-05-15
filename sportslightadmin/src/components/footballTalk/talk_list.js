@@ -46,7 +46,7 @@ const FootballTalkList = () => {
         <thead>
           <tr>
             <th>번호</th>
-            <th>회원 번호</th>
+            <th>회원</th>
             <th>대회 번호</th>
             <th>제목</th>
             <th>내용</th>

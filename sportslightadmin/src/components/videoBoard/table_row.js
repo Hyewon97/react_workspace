@@ -39,7 +39,11 @@ const TableRow = (props) => {
     <tr>
       <td>{videoBoard.videoNum}</td>
       <td>{videoBoard.videoBoardNum}</td>
-      <td>{videoBoard.memberNum}</td>
+      <td>
+        {videoBoard["memberzDTO"]
+          ? videoBoard["memberzDTO"]["memberProfile"]
+          : null}
+      </td>
       <td>{videoBoard.videoReply}</td>
       <td>
         <button className="btn btn-outline-danger" onClick={deleteVideoBoard}>
