@@ -43,7 +43,13 @@ const TableRow = (props) => {
 
       {/* <td>{memberz.memberLeave === "T" ? "탈퇴 회원" : "활동 회원"}</td>  아래 코드로 사용 가능*/}
       {/* 이 부분에 아이콘 추가했으면 좋겠음 */}
-      <td>{memberz.memberEmail === "Null" ? "탈퇴 회원" : "활동 회원"}</td>
+      <td>
+        {memberz.memberEmail === "Null" ? (
+          <img src="/images/userb.png" width="30" height="30" />
+        ) : (
+          <img src="/images/usera.png" width="30" height="30" />
+        )}
+      </td>
 
       <td>
         <button className="btn btn-outline-danger" onClick={updateMemberLeave}>

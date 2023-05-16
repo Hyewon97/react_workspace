@@ -35,16 +35,30 @@ const TableRow = (props) => {
           : null}
       </td>
 
+      {/* <td>{footballTalk.leagueNum}</td> */}
       <td>
-        {/* <Link to={`/admin/video/view/${video.videoNum}`}>
-          {video.videoName}
-        </Link> */}
-        {footballTalk.leagueNum}
+        {footballTalk.leagueNum === 1
+          ? "프리미어리그"
+          : footballTalk.leagueNum === 2
+          ? "라리가"
+          : footballTalk.leagueNum === 3
+          ? "분데스리가"
+          : footballTalk.leagueNum === 4
+          ? "세리에 A"
+          : footballTalk.leagueNum === 5
+          ? "리그 1"
+          : footballTalk.leagueNum === 6
+          ? "UCL(챔피언스리그)"
+          : footballTalk.leagueNum === 7
+          ? "UEL(유로파리그)"
+          : footballTalk.leagueNum === 8
+          ? "k 리그 1"
+          : "k 리그 2"}
       </td>
 
       <td>{footballTalk.talkTitle}</td>
       <td>{footballTalk.talkContent}</td>
-      <td>{footballTalk.regDate}</td>
+      {/* <td>{footballTalk.regDate}</td> */}
       <td>
         <button className="btn btn-outline-info" onClick={linkToComments}>
           이동

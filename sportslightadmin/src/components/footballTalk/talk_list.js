@@ -31,14 +31,14 @@ const FootballTalkList = () => {
     <div>
       <h3 className="text-center">토크 목록</h3>
       {/* 테이블 스타일 변경 */}
-      <table className="table table-hover" style={{ marginTop: 20 }}>
+      <table className="table table-hover" style={{ marginTop: 80 }}>
         <colgroup>
           <col width="5%" />
           <col width="8%" />
-          <col width="8%" />
-          <col width="20%" />
+          <col width="12%" />
           <col width="*%" />
-          <col width="10%" />
+          <col width="*%" />
+          {/* <col width="10%" /> */}
           <col width="8%" />
           <col width="8%" />
         </colgroup>
@@ -50,7 +50,7 @@ const FootballTalkList = () => {
             <th>대회 번호</th>
             <th>제목</th>
             <th>내용</th>
-            <th>작성일자</th>
+            {/* <th>작성일자</th> */}
             <th>댓글</th>
             <th></th>
           </tr>

@@ -79,8 +79,8 @@ const Update = () => {
   };
 
   return (
-    <div className="container">
-      <div style={{ display: "flex", alignItems: "center" }}>
+    <div className="container text-center mt-5">
+      <div style={{ marginBottom: 50 }}>
         <h1>정보 수정</h1>
         {/* 탈퇴 */}
         <button
@@ -90,11 +90,14 @@ const Update = () => {
         >
           회원탈퇴
         </button>
+        <div style={{ display: "flex", alignItems: "center" }}></div>
       </div>
-
       <form onSubmit={onSubmit}>
         <div className="container">
-          <div className="form-group mb-1">
+          <div
+            className="form-group mb-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="email"
               className="form-control"
@@ -102,9 +105,13 @@ const Update = () => {
               placeholder="이메일"
               value={localStorage.adminEmail}
               readOnly
+              style={{ width: "50%" }}
             />
           </div>
-          <div className="form-group mb-1">
+          <div
+            className="form-group mb-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="password"
               className="form-control"
@@ -112,22 +119,30 @@ const Update = () => {
               placeholder="비밀번호"
               value={adminPass}
               onChange={handleValueChange}
+              style={{ width: "50%" }}
             />
           </div>
 
           {/* 비밀번호 확인 */}
-          <div className="form-group mb-1">
+          <div
+            className="form-group mb-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="password"
               className="form-control"
               name="adminPass2"
               placeholder="비밀번호 확인"
               onChange={passChange}
+              style={{ width: "50%" }}
             />
             <span>{passwordCheck}</span>
           </div>
 
-          <div className="form-group mb-1">
+          <div
+            className="form-group mb-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="text"
               className="form-control"
@@ -135,11 +150,20 @@ const Update = () => {
               placeholder="닉네임"
               value={adminProfile}
               onChange={handleValueChange}
+              style={{ width: "50%" }}
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
-            관리자 정보 수정
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{
+              backgroundColor: "black",
+              borderStyle: "none",
+              color: "white",
+            }}
+          >
+            정보 수정
           </button>
         </div>
       </form>

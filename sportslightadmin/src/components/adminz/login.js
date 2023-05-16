@@ -53,10 +53,13 @@ const LoginPage = () => {
 
   return (
     <div className="container text-center mt-5">
+      <h1 style={{ marginBottom: 50 }}>로그인</h1>
       <div className="mx-5">
-        <h1>로그인</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form-group mt-1">
+        <form onSubmit={onSubmit} style={{ marginTop: 80 }}>
+          <div
+            className="form-group mt-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="email"
               name="adminEmail"
@@ -66,9 +69,13 @@ const LoginPage = () => {
               placeholder="이메일"
               maxLength="20"
               onChange={handleValueChange}
+              style={{ width: "50%" }}
             />
           </div>
-          <div className="form-group mt-1">
+          <div
+            className="form-group mt-1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <input
               type="password"
               className="form-control"
@@ -78,13 +85,30 @@ const LoginPage = () => {
               placeholder="비밀번호"
               maxLength="20"
               onChange={handleValueChange}
+              style={{ width: "50%" }}
             />
           </div>
           <div className="mt-1">
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              style={{
+                backgroundColor: "black",
+                borderStyle: "none",
+                color: "white",
+              }}
+            >
               로그인
             </button>
-            <Link className="btn btn-primary" to="/joinadd">
+            <Link
+              className="btn btn-primary"
+              to="/joinadd"
+              style={{
+                backgroundColor: "black",
+                borderStyle: "none",
+                color: "white",
+              }}
+            >
               회원 가입
             </Link>
           </div>

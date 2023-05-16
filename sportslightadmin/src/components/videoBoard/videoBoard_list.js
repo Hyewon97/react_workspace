@@ -33,10 +33,10 @@ const VideoBoardList = () => {
       <Link className="btn btn-secondary" to="/admin/video/list/1">
         영상 목록
       </Link>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table" style={{ marginTop: 80 }}>
         <colgroup>
-          <col width="8%" />
-          <col width="8%" />
+          <col width="10%" />
+          <col width="10%" />
           <col width="8%" />
           <col width="*%" />
           <col width="8%" />
@@ -45,8 +45,8 @@ const VideoBoardList = () => {
         <thead>
           <tr>
             <th>동영상 번호</th>
-            <th>게시판 번호</th>
-            <th>작성자 번호</th>
+            <th>글 번호</th>
+            <th>작성자</th>
             <th>내용</th>
             <th></th>
           </tr>

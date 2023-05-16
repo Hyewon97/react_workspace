@@ -15,7 +15,7 @@ const VideoView = () => {
       Authorization: localStorage.getItem("Authorization"),
     },
   };
-
+  console.log(videoDetail);
   useEffect(() => {
     dispatch(videoActions.getVideoDetail(videoNum, config));
   }, [dispatch, videoNum]);
@@ -29,7 +29,7 @@ const VideoView = () => {
 
   return (
     <div>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table" style={{ marginTop: 20 }}>
         <tbody>
           <tr>
             <th width="20%">영상 번호</th>
@@ -52,15 +52,12 @@ const VideoView = () => {
           </tr>
 
           <tr>
-            <th>동영상 타입</th>
-            <td colSpan="3">
-              {videoDetail.videoType === "l" ? "영상" : "쇼츠"}
-            </td>
-          </tr>
-
-          <tr>
             <th>팀1 </th>
-            <td colSpan="3">{videoDetail.teamNum1}</td>
+            <td colSpan="3">
+              {videoDetail["teamDTO"]
+                ? videoDetail["teamDTO"]["teamName"]
+                : null}
+            </td>
           </tr>
 
           <tr>
@@ -71,21 +68,21 @@ const VideoView = () => {
           <tr>
             <th>리그 </th>
             <td colSpan="3">
-              {videoDetail.leagueNum === "1"
+              {videoDetail.leagueNum === 1
                 ? "프리미어리그"
-                : videoDetail.leagueNum === "2"
+                : videoDetail.leagueNum === 2
                 ? "라리가"
-                : videoDetail.leagueNum === "3"
+                : videoDetail.leagueNum === 3
                 ? "분데스리가"
-                : videoDetail.leagueNum === "4"
+                : videoDetail.leagueNum === 4
                 ? "세리에 A"
-                : videoDetail.leagueNum === "5"
+                : videoDetail.leagueNum === 5
                 ? "리그 1"
-                : videoDetail.leagueNum === "6"
+                : videoDetail.leagueNum === 6
                 ? "UCL(챔피언스리그)"
-                : videoDetail.leagueNum === "7"
+                : videoDetail.leagueNum === 7
                 ? "UEL(유로파리그)"
-                : videoDetail.leagueNum === "8"
+                : videoDetail.leagueNum === 8
                 ? "k 리그 1"
                 : "k 리그 2"}
             </td>
@@ -100,16 +97,15 @@ const VideoView = () => {
         리스트
       </Link>
 
-      {/* {localStorage.getItem("memberEmail") ===
-      (boardDetail["memberEmail"] ? boardDetail["memberEmail"] : null) ? (
-        <> */}
-      <Link className="btn btn-primary" to={`/admin/video/update/${videoNum}`}>
-        수정
-      </Link>
+      <div className="text-center2">
+        <Link className="btn btn-dark" to={`/admin/video/update/${videoNum}`}>
+          수정
+        </Link>
 
-      <button className="btn btn-primary" onClick={handleDelete}>
-        삭제
-      </button>
+        <button className="btn btn-dark" onClick={handleDelete}>
+          삭제
+        </button>
+      </div>
     </div>
   );
 };

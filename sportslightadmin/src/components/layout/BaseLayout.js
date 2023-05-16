@@ -2,13 +2,14 @@ import { NavLink, Outlet } from "react-router-dom";
 function BaseLayout() {
   // nav 선택했을 때, 스타일 변경
   const activeStyle = ({ isActive }) => ({
-    color: isActive ? "green" : "",
-    fontSize: isActive ? "1.2rem" : "",
+    color: isActive ? "#17ad35" : "white",
+    fontSize: isActive ? "1.2rem" : "1.2rem",
+    fontWeight: isActive ? "bold" : "",
   });
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">

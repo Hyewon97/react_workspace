@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // 부트 스트랩 임포트
 
+import React from "react";
+
 import BaseLayout from "./components/layout/BaseLayout";
 
 import Home from "./components/home";

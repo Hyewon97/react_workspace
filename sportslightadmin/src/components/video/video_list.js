@@ -28,7 +28,7 @@ const VideoList = () => {
   return (
     <div>
       <h3 className="text-center">영상 목록</h3>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table" style={{ marginTop: 80 }}>
         <colgroup>
           <col width="5%" />
           <col width="20%" />
@@ -42,7 +42,6 @@ const VideoList = () => {
             <th>번호</th>
             <th>썸네일</th>
             <th>영상 제목</th>
-            <th>영상타입</th>
             <th>댓글관리</th>
           </tr>
         </thead>

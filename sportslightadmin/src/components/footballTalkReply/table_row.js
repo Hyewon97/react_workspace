@@ -23,7 +23,11 @@ const TableRow = (props) => {
     <tr>
       <td>{footballTalkReply.talkNum}</td>
       <td>{footballTalkReply.talkReplyNum}</td>
-      <td>{footballTalkReply.memberNum}</td>
+      <td>
+        {footballTalkReply["memberzDTO"]
+          ? footballTalkReply["memberzDTO"]["memberProfile"]
+          : null}
+      </td>
 
       <td>{footballTalkReply.talkReplyContent}</td>
       <td>{footballTalkReply.regDate}</td>

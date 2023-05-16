@@ -43,8 +43,6 @@ const TableRow = (props) => {
         </Link>
       </td>
 
-      <td>{video.videoType === "l" ? "영상" : "쇼츠"}</td>
-
       <td>
         {/* <button className="btn btn-outline-danger" onClick={linkToComments}>
           이동

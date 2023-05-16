@@ -33,7 +33,7 @@ const NoticeList = () => {
         글쓰기
       </Link>
 
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table table-hover" style={{ marginTop: 80 }}>
         <colgroup>
           <col width="8%" />
           <col width="*" />

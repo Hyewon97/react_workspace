@@ -31,63 +31,68 @@ const NoticeView = () => {
 
   return (
     <div>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table " style={{ marginTop: 20 }}>
         <tbody>
           <tr>
-            <th width="20%">글쓴이</th>
-            <td>
+            <th width="10%">글쓴이</th>
+            <td width="*">
               {noticeDetail["adminzDTO"]
                 ? noticeDetail["adminzDTO"]["adminProfile"]
                 : null}
             </td>
+
+            <th width="10%">작성일자</th>
+            <td width="10%">{noticeDetail.writeDate}</td>
+
+            <th width="10%">글 번호</th>
+            <td width="10%">{noticeDetail.noticeNum}</td>
           </tr>
 
           <tr>
             <th>제목</th>
-            <td colSpan="3">{noticeDetail.noticeTitle}</td>
+            <td colSpan="5">{noticeDetail.noticeTitle}</td>
           </tr>
 
-          <tr>
-            <th>사용자 고유번호</th>
-            <td colSpan="3">{noticeDetail.adminNum}</td>
-          </tr>
-
-          <tr>
-            <th>글 고유번호</th>
-            <td colSpan="3">{noticeDetail.noticeNum}</td>
+          {/* <tr>
+            <th>글 번호</th>
+            <td colSpan="5">{noticeDetail.noticeNum}</td>
           </tr>
 
           <tr>
             <th>작성일자</th>
-            <td colSpan="3">{noticeDetail.writeDate}</td>
-          </tr>
+            <td colSpan="5">{noticeDetail.writeDate}</td>
+          </tr> */}
 
           <tr>
             <th>내용</th>
-            <td colSpan="3">{noticeDetail.noticeContent}</td>
+            <td
+              colSpan="5"
+              rows="15"
+              cpls="100"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {noticeDetail.noticeContent}
+            </td>
           </tr>
         </tbody>
       </table>
 
-      <Link
-        className="btn btn-primary"
-        to={`/admin/notice/list/${pv.currentPage}`}
-      >
-        리스트
-      </Link>
+      <div className="text-center2">
+        <Link
+          className="btn btn-dark"
+          to={`/admin/notice/list/${pv.currentPage}`}
+        >
+          리스트
+        </Link>
 
-      {/* {localStorage.getItem("memberEmail") ===
-      (boardDetail["memberEmail"] ? boardDetail["memberEmail"] : null) ? (
-        <> */}
-      <Link className="btn btn-primary" to={`/admin/notice/update/${num}`}>
-        수정
-      </Link>
+        <Link className="btn btn-dark" to={`/admin/notice/update/${num}`}>
+          수정
+        </Link>
 
-      <button className="btn btn-primary" onClick={handleDelete}>
-        삭제
-      </button>
-      {/* </> */}
-      {/* ) : null} */}
+        <button className="btn btn-dark" onClick={handleDelete}>
+          삭제
+        </button>
+      </div>
     </div>
   );
 };

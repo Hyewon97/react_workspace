@@ -71,13 +71,16 @@ const NoticeWrite = () => {
         <table>
           <tbody>
             <tr>
-              <td>작성자</td>
+              <td width="20%" align="center">
+                작성자
+              </td>
               <td>
                 <input
-                  type="type"
+                  type="text"
                   readOnly
                   value={localStorage.getItem("adminProfile")}
                   name="adminProfile"
+                  style={{ border: "none" }}
                 />
               </td>
             </tr>
@@ -90,10 +93,9 @@ const NoticeWrite = () => {
                 <input
                   type="text"
                   name="noticeTitle"
-                  size="40"
                   value={noticeTitle}
-                  // placeholder={num !== undefined ? "답변" : null}
                   onChange={handleValueChange}
+                  style={{ width: "822px" }}
                 />
               </td>
             </tr>
@@ -105,8 +107,8 @@ const NoticeWrite = () => {
               <td>
                 <textarea
                   name="noticeContent"
-                  rows="13"
-                  cols="40"
+                  rows="15"
+                  cols="100"
                   value={noticeContent}
                   onChange={handleValueChange}
                 ></textarea>
@@ -114,13 +116,15 @@ const NoticeWrite = () => {
             </tr>
           </tbody>
         </table>
-        <Link
-          className="btn btn-primary"
-          to={`/admin/notice/list/${pv.currentPage}`}
-        >
-          리스트
-        </Link>
-        <input type="submit" className="btn btn-primary" value="등록" />
+        <div className="text-center2">
+          <Link
+            className="btn btn-dark"
+            to={`/admin/notice/list/${pv.currentPage}`}
+          >
+            리스트
+          </Link>
+          <input type="submit" className="btn btn-dark" value="등록" />
+        </div>
       </form>
     </>
   );

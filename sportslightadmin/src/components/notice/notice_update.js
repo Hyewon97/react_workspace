@@ -73,10 +73,10 @@ const NoticeUpdate = () => {
   return (
     <div>
       <form name="frm" encType="multipart/form-data">
-        <table className="table table-striped" style={{ marginTop: 20 }}>
+        <table className="table" style={{ marginTop: 20 }}>
           <tbody>
             <tr>
-              <th width="20%">글쓴이</th>
+              <th width="18%">글쓴이</th>
               <td>
                 {notice["adminzDTO"]
                   ? notice["adminzDTO"]["adminProfile"]
@@ -92,7 +92,7 @@ const NoticeUpdate = () => {
 
             <tr>
               <th>제목</th>
-              <td colSpan="3">
+              <td colSpan="5">
                 <input
                   type="text"
                   name="noticeTitle"
@@ -100,18 +100,19 @@ const NoticeUpdate = () => {
                   defaultValue={notice.noticeTitle}
                   value={noticeTitle}
                   onChange={handleValueChange}
+                  style={{ width: "822px" }}
                 />
               </td>
             </tr>
 
             <tr>
               <th>내용</th>
-              <td colSpan="3">
+              <td colSpan="5">
                 <textarea
                   name="noticeContent"
                   id="noticeContent"
-                  rows="13"
-                  cols="40"
+                  rows="15"
+                  cols="100"
                   defaultValue={notice.noticeContent}
                   value={noticeContent}
                   onChange={handleValueChange}
@@ -121,15 +122,17 @@ const NoticeUpdate = () => {
           </tbody>
         </table>
 
-        <button className="btn btn-primary" onClick={handleUpdate}>
-          수정
-        </button>
-        <button className="btn btn-primary" onClick={handleReset}>
-          취소
-        </button>
-        <button className="btn btn-primary" onClick={handleBack}>
-          뒤로
-        </button>
+        <div className="text-center2">
+          <button className="btn btn-dark" onClick={handleUpdate}>
+            수정
+          </button>
+          <button className="btn btn-dark" onClick={handleReset}>
+            취소
+          </button>
+          <button className="btn btn-dark" onClick={handleBack}>
+            뒤로
+          </button>
+        </div>
       </form>
     </div>
   );

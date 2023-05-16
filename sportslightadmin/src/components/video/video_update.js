@@ -97,7 +97,7 @@ const VideoUpdate = () => {
   return (
     <div>
       <form name="frm" encType="multipart/form-data">
-        <table className="table table-striped" style={{ marginTop: 20 }}>
+        <table className="table" style={{ marginTop: 20 }}>
           <tbody>
             <tr>
               <th width="20%">영상 제목</th>
@@ -145,22 +145,6 @@ const VideoUpdate = () => {
             </tr>
 
             <tr>
-              <th width="20%">비디오 타입</th>
-              <td colSpan="3">
-                <select
-                  name="videoType"
-                  id="videoType"
-                  style={{ width: "5%", height: "100%" }}
-                  value={videoType}
-                  onChange={handleValueChange}
-                >
-                  <option value="s">s</option>
-                  <option value="l">l</option>
-                </select>
-              </td>
-            </tr>
-
-            <tr>
               <th width="20%">팀1</th>
               <td colSpan="3">
                 <input
@@ -204,33 +188,20 @@ const VideoUpdate = () => {
                 />
               </td>
             </tr>
-
-            {/* <tr>
-              <th>내용</th>
-              <td colSpan="3">
-                <textarea
-                  name="videoUrl"
-                  id="videoUrl"
-                  rows="13"
-                  cols="40"
-                  defaultValue={video.videoUrl}
-                  value={videoUrl}
-                  onChange={handleValueChange}
-                ></textarea>
-              </td>
-            </tr> */}
           </tbody>
         </table>
 
-        <button className="btn btn-primary" onClick={handleUpdate}>
-          수정
-        </button>
-        <button className="btn btn-primary" onClick={handleReset}>
-          취소
-        </button>
-        <button className="btn btn-primary" onClick={handleBack}>
-          뒤로
-        </button>
+        <div className="text-center2">
+          <button className="btn btn-dark" onClick={handleUpdate}>
+            수정
+          </button>
+          <button className="btn btn-dark" onClick={handleReset}>
+            취소
+          </button>
+          <button className="btn btn-dark" onClick={handleBack}>
+            뒤로
+          </button>
+        </div>
       </form>
     </div>
   );

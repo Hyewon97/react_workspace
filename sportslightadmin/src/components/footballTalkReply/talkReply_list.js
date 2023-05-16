@@ -35,9 +35,9 @@ const FootballTalkReplyList = () => {
       <Link className="btn btn-secondary" to="/admin/footballTalk/list/1">
         토크 목록
       </Link>
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table table-hover" style={{ marginTop: 80 }}>
         <colgroup>
-          <col width="8%" />
+          <col width="10%" />
           <col width="8%" />
           <col width="8%" />
           <col width="*%" />
