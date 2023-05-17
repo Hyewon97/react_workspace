@@ -90,7 +90,7 @@ const JoinAdd = () => {
               color: "white",
             }}
           >
-            가입 완료
+            가입 하기
           </button>
         </div>
       </form>

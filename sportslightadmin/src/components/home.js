@@ -1,5 +1,9 @@
 const Home = () => {
-  return <div>This is Home</div>;
+  return (
+    <div>
+      <img className="imgStyle" src="/images/main.jpg"></img>
+    </div>
+  );
 };
 
 export default Home;

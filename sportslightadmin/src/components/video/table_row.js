@@ -38,7 +38,7 @@ const TableRow = (props) => {
       </td>
 
       <td>
-        <Link to={`/admin/video/view/${video.videoNum}`}>
+        <Link to={`/admin/video/view/${video.videoNum}`} className="linkStyle">
           {video.videoName}
         </Link>
       </td>
@@ -53,7 +53,12 @@ const TableRow = (props) => {
         >
           이동
         </button> */}
-        <button className="btn btn-outline-info" onClick={linkToComments}>
+        <button
+          className="btn btn-outline-dark"
+          onClick={linkToComments}
+          // style={{ marginTop: "55%" }}
+          style={{ marginTop: "65px" }}
+        >
           이동
         </button>
       </td>

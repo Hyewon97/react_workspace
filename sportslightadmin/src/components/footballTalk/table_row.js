@@ -60,7 +60,7 @@ const TableRow = (props) => {
       <td>{footballTalk.talkContent}</td>
       {/* <td>{footballTalk.regDate}</td> */}
       <td>
-        <button className="btn btn-outline-info" onClick={linkToComments}>
+        <button className="btn btn-outline-dark" onClick={linkToComments}>
           이동
         </button>
       </td>

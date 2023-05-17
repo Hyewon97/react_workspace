@@ -37,14 +37,14 @@ const VideoBoardList = () => {
         <colgroup>
           <col width="10%" />
           <col width="10%" />
-          <col width="8%" />
+          <col width="10%" />
           <col width="*%" />
           <col width="8%" />
         </colgroup>
 
         <thead>
           <tr>
-            <th>동영상 번호</th>
+            <th>영상 번호</th>
             <th>글 번호</th>
             <th>작성자</th>
             <th>내용</th>

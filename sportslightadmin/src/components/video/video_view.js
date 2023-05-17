@@ -53,11 +53,7 @@ const VideoView = () => {
 
           <tr>
             <th>팀1 </th>
-            <td colSpan="3">
-              {videoDetail["teamDTO"]
-                ? videoDetail["teamDTO"]["teamName"]
-                : null}
-            </td>
+            <td colSpan="3">{videoDetail.teamNum1}</td>
           </tr>
 
           <tr>
@@ -90,10 +86,7 @@ const VideoView = () => {
         </tbody>
       </table>
 
-      <Link
-        className="btn btn-primary"
-        to={`/admin/video/list/${pv.currentPage}`}
-      >
+      <Link className="btn btn-dark" to={`/admin/video/list/${pv.currentPage}`}>
         리스트
       </Link>
 

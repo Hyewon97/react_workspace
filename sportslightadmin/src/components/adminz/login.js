@@ -44,7 +44,7 @@ const LoginPage = () => {
       })
       .then((response) => {
         // navigator('/');
-        window.location.replace("/");
+        window.location.replace("/admin/notice/list/1");
       })
       .catch((err) => {
         console.error(err.message);

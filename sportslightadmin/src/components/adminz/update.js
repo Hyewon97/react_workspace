@@ -85,10 +85,10 @@ const Update = () => {
         {/* 탈퇴 */}
         <button
           style={{ marginLeft: "80%", fontSize: "13px" }}
-          className="btn btn-outline-secondary"
+          className="btn btn-outline-danger"
           onClick={adminWithdraw}
         >
-          회원탈퇴
+          관리자 탈퇴
         </button>
         <div style={{ display: "flex", alignItems: "center" }}></div>
       </div>
