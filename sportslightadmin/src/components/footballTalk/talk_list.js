@@ -34,23 +34,21 @@ const FootballTalkList = () => {
       <table className="table table-hover" style={{ marginTop: 80 }}>
         <colgroup>
           <col width="5%" />
-          <col width="8%" />
-          <col width="12%" />
+          <col width="13%" />
+          <col width="13%" />
           <col width="*%" />
           <col width="*%" />
-          {/* <col width="10%" /> */}
-          <col width="8%" />
-          <col width="8%" />
+          <col width="6%" />
+          <col width="6%" />
         </colgroup>
 
         <thead>
           <tr>
             <th>번호</th>
             <th>회원</th>
-            <th>대회 번호</th>
+            <th>리그</th>
             <th>제목</th>
             <th>내용</th>
-            {/* <th>작성일자</th> */}
             <th>댓글</th>
             <th></th>
           </tr>

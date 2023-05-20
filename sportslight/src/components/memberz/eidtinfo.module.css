@@ -1,0 +1,83 @@
+.wrap {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  position: relative;
+  padding-top: 50px;
+  width: 500px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+.control {
+  padding-bottom: 10px;
+  letter-spacing: normal;
+  font-size: 15px;
+  color: #888888;
+  background-color: transparent;
+  margin-bottom: 45px;
+  z-index: 99999999;
+
+  /* border-bottom: 1px solid #888888; */
+}
+
+.control > input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #888888;
+  color: #fffafa;
+  margin-bottom: 10px;
+}
+.control > input:focus {
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  border: 3px;
+  border-bottom: 1px solid #17ad35;
+}
+
+.editinfotitle {
+  margin-bottom: 30px;
+  padding-top: 100px;
+}
+.button {
+  right: -85px;
+  opacity: 20px;
+  background: #17ad35;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+
+  border-radius: 5px;
+  width: 100px; /* 예시 */
+  height: 40px;
+  margin-bottom: 10px;
+}
+.button2 {
+  right: -85px;
+  opacity: 20px;
+  background: #17ad35;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 5px;
+  width: 100px; /* 예시 */
+  height: 40px;
+  margin-bottom: 10px;
+}
+.logo2 > img {
+  filter: invert(0%) sepia(94%) saturate(8%) hue-rotate(156deg) brightness(100%)
+    contrast(101%) opacity(30%);
+  margin: auto;
+}
+.logo2 {
+  position: absolute;
+
+  text-align: center;
+  width: 100%;
+  top: 150px;
+}

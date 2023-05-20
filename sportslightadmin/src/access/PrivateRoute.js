@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 
-// 로그인을 해야만 접근할 수 있고, 정상적으로 로그인 되면 가는 컴포넌트?
+// 로그인을 해야만 접근할 수 있음
 const PrivateRoute = ({ isAuth, RouteComponent }) => {
   const isLogin = localStorage.getItem("isLogin");
   console.log(isAuth, isLogin);
@@ -19,8 +19,6 @@ const PrivateRoute = ({ isAuth, RouteComponent }) => {
   else {
     return <RouteComponent />;
   }
-
-  // return <Navigate to='/' />;
 };
 
 export default PrivateRoute;

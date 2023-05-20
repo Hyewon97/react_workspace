@@ -14,18 +14,6 @@ const TableRow = (props) => {
     },
   };
 
-  // const deleteVideoBoard = async () => {
-  //   await axios.delete`${baseURL}/admin/videoBoard/list/delete/${videoBoard.videoBoardNum}`;
-  //   //console.log(videoBoard.videoBoardNum);
-  // };
-
-  // const deleteVideoBoard = (e) => {
-  //   e.preventDefault();
-  //   dispatch(videoBoardActions.getVideoBoardDelete(num, config));
-
-  //   // navigator(`/admin/videoBoard/list/${pv.currentPage}`);
-  // };
-
   const deleteVideoBoard = async () => {
     console.log(videoBoard.videoBoardNum);
 

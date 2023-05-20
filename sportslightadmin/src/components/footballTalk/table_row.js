@@ -20,10 +20,7 @@ const TableRow = (props) => {
   };
 
   const linkToComments = () => {
-    // console.log(
-    //   "footballTalk list의 footballTalk.talkNum : " + footballTalk.talkNum
-    // );
-    navigate(`/admin/footballTalkReply/list/${footballTalk.talkNum}/1`); // 주소 임시 폐쇄
+    navigate(`/admin/footballTalkReply/list/${footballTalk.talkNum}/1`);
   };
 
   return (
@@ -35,7 +32,6 @@ const TableRow = (props) => {
           : null}
       </td>
 
-      {/* <td>{footballTalk.leagueNum}</td> */}
       <td>
         {footballTalk.leagueNum === 1
           ? "프리미어리그"
@@ -58,7 +54,6 @@ const TableRow = (props) => {
 
       <td>{footballTalk.talkTitle}</td>
       <td>{footballTalk.talkContent}</td>
-      {/* <td>{footballTalk.regDate}</td> */}
       <td>
         <button className="btn btn-outline-dark" onClick={linkToComments}>
           이동
@@ -66,7 +61,7 @@ const TableRow = (props) => {
       </td>
       <td>
         <button className="btn btn-outline-danger" onClick={footballTalkdel}>
-          글 삭제
+          삭제
         </button>
       </td>
     </tr>

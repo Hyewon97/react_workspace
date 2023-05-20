@@ -1,0 +1,50 @@
+/* modal창 외부화면 */
+.aaaa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* modal창 */
+.bbbb {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  padding: 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+
+.modalMessage{
+  color: black;
+  margin-top: 35px;
+  font-size: larger;
+}
+
+
+#modalCloseBtn {
+  position: relative;
+  top: 17px;
+  right: 15px;
+  color: rgb(255,255,255);
+  background-color: transparent;
+  font-size: 20px;
+  margin-top: 40px;
+  font-weight: 400;
+  border: none;
+  background-color: #0a5a0a;
+  width: 70px;
+  height: 38px;
+  border-radius: 7px;
+}
+
+

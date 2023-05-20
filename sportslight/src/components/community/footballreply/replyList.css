@@ -1,0 +1,72 @@
+.replyForm {
+  display: flex;
+  border: 1px solid #3e3d3d;
+  margin: 10px 30px;
+  border-radius: 10px;
+}
+
+.replyTextArea {
+  width: 90%;
+}
+.replyTextArea > textarea {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 15px;
+  background-color: unset;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.replySubmit {
+  width: 10%;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.replyWrapper {
+  min-height: 60px;
+  padding: 9px 0px 0px 30px;
+  /* margin-bottom: 5px; */
+  display: flex;
+}
+
+.replyUser {
+  width: 40px;
+}
+
+.replyOnseSection {
+  margin-left: 10px;
+}
+
+.replyBorderBottom {
+  display: flex;
+  width: 1170px;
+  border-bottom: 1px solid #4e4c4cd4;
+  padding-bottom: 8px;
+}
+
+.replyWrapper > div:nth-child(1) {
+  padding-left: 15px;
+}
+
+.replyWriter {
+  font-size: 14pt;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+.replyContent {
+  padding-left: 15px;
+}
+
+.replyDate {
+  font-size: 10pt;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  color: darkgray;
+}
+
+.replyBorder {
+  border-bottom: 1px solid #3e3d3d;
+}

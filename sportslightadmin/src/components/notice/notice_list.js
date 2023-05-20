@@ -27,7 +27,7 @@ const NoticeList = () => {
 
   return (
     <div>
-      <h3 className="text-center">공지사항 목록</h3>
+      <h3 className="text-center">공지 목록</h3>
 
       <Link className="btn btn-outline-secondary" to="/admin/notice/write">
         글쓰기

@@ -1,0 +1,110 @@
+.wrap {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.logo {
+  padding: 20px;
+}
+.logo > img {
+  width: 150px;
+}
+h1 {
+  font-size: 24px; /* 원하는 크기로 수정하세요 */
+}
+
+.control {
+  padding-bottom: 10px;
+  letter-spacing: normal;
+  font-size: 15px;
+  color: #888888;
+  background-color: transparent;
+  margin-bottom: 50px;
+
+  /* border-bottom: 1px solid #888888; */
+}
+
+.control > input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #888888;
+  color: #fffafa;
+}
+.control > input:focus {
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  border: 3px;
+  border-bottom: 1px solid #17ad35;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.button {
+  right: -85px;
+  opacity: 20px;
+  background: #17ad35;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px; /* 예시 */
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.dropMenu {
+  width: 150px;
+  border: 1px solid#888888;
+  background-color: black;
+  color: #888888;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.dropMenuo option {
+  background-color: #888888;
+  color: #333333;
+  padding: 5px;
+}
+
+.dropMenu:focus {
+  outline: none;
+  border-color: #17ad35;
+  box-shadow: 0 0 3px rgba(23, 173, 53, 0.6);
+}
+
+.logo2 > img {
+  filter: invert(0%) sepia(94%) saturate(8%) hue-rotate(156deg) brightness(100%)
+    contrast(101%) opacity(30%);
+  margin: auto;
+}
+.logo2 {
+  position: absolute;
+  bottom: 125px;
+  text-align: center;
+  width: 100%;
+  top: 150px;
+}
+
+.signuptitle {
+  margin-bottom: 50px;
+}
+
+.button2 {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #fffafa;
+  margin-left: -224px;
+}

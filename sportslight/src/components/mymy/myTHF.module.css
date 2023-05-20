@@ -1,0 +1,115 @@
+
+.myNav {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(25, 25, 25);
+}
+
+.mySize {
+  margin-left: 100px;
+  padding-top: 65px;
+}
+
+.myTHF {
+    color: white;
+    height: 100%;
+    margin-left: 4%;
+    margin-top: 4%;
+    /* padding-bottom: 20px; */
+}
+
+.noHF {
+    padding-top: 100px;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: -16px;
+    padding-bottom: 100px;
+}
+
+.userName{
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-right: 5px;
+  padding-top: 5px;
+  margin-bottom: 55px;
+}
+
+.userName > span {
+  padding-top: 8px;
+  margin-left: 6px;
+}
+
+.userEI {
+  padding-top: 35px;
+  margin-left: 10px;
+  color: rgb(133, 132, 132);
+}
+
+/* mypage MY팀/리그 좋아요 즐겨찾기 탭*/
+.myNav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+  font-weight: 600;
+}
+
+.myNav ul :focus{
+  border-bottom: 2px solid white;
+}
+
+.myNav li {
+  margin-right: 20px;
+}
+
+.myNav li > a {
+  /* padding-right: 30px; */
+  margin-left: 16px;
+  padding-bottom: 5px;
+}
+
+.myTL {
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  margin-left: 6%;
+  margin-top: 4%;
+  margin-bottom: 10%;
+}
+
+.myTL > p {
+  font-size: xx-large;
+  margin-right: 3%;
+  font-weight: 600;
+}
+
+
+.myTeam {
+  display: flex;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.myTeam > div {
+  width: 200px;
+  font-size: x-large;
+  background-color: #262626a3;
+  margin-right: 5%;
+  text-align: center;
+  padding-bottom: 5%;
+  border-radius: 10px;
+  padding-top: 3%;
+  opacity: 80%;
+}
+
+.myHFvideo {
+  margin: 2% 1% 2% 1%;
+  height: 280px;
+  position: relative;
+}
+
+
+

@@ -81,7 +81,6 @@ const NoticeUpdate = () => {
                 {notice["adminzDTO"]
                   ? notice["adminzDTO"]["adminProfile"]
                   : null}
-                {/* {notice.adminProfile} */}
               </td>
               <th width="20%">등록일</th>
               <td>{notice.writeDate}</td>

@@ -30,9 +30,9 @@ const MemberzList = () => {
       <h3 className="text-center">회원 목록</h3>
       <table className="table table-hover" style={{ marginTop: 80 }}>
         <colgroup>
-          <col width="12%" />
+          <col width="5%" />
           <col width="*%" />
-          <col width="30%" />
+          <col width="35%" />
           <col width="15%" />
           <col width="7%" />
           <col width="10%" />
@@ -40,9 +40,9 @@ const MemberzList = () => {
 
         <thead>
           <tr>
-            <th>회원 번호</th>
-            <th>회원 이메일</th>
-            <th>회원 닉네임</th>
+            <th>번호</th>
+            <th>이메일</th>
+            <th>닉네임</th>
             <th>가입일</th>
             <th>상태</th>
             <th></th>

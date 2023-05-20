@@ -55,8 +55,11 @@ const Update = () => {
   const passChange = (e) => {
     e.preventDefault();
 
-    if (adminPass !== e.target.value) setPasswordCheck("비밀번호 불일치");
-    else setPasswordCheck("비밀번호 일치");
+    if (adminPass !== e.target.value) {
+      setPasswordCheck(<span style={{ color: "red" }}>비밀번호 불일치</span>);
+    } else {
+      setPasswordCheck(<span style={{ color: "green" }}>비밀번호 일치</span>);
+    }
   };
 
   const handleValueChange = (e) => {
@@ -74,8 +77,8 @@ const Update = () => {
 
     await axios.post(`${baseURL}/admin/update`, adminz, config);
     localStorage.setItem("adminProfile", adminProfile);
-    // navigator("/");
-    window.location.replace("/");
+
+    window.location.replace("/admin/notice/list/1");
   };
 
   return (
@@ -136,8 +139,8 @@ const Update = () => {
               onChange={passChange}
               style={{ width: "50%" }}
             />
-            <span>{passwordCheck}</span>
           </div>
+          <div style={{ marginRight: "40%" }}>{passwordCheck}</div>
 
           <div
             className="form-group mb-1"

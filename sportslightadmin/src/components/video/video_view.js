@@ -15,7 +15,7 @@ const VideoView = () => {
       Authorization: localStorage.getItem("Authorization"),
     },
   };
-  console.log(videoDetail);
+  console.log(videoDetail.leagueNum);
   useEffect(() => {
     dispatch(videoActions.getVideoDetail(videoNum, config));
   }, [dispatch, videoNum]);
@@ -32,12 +32,12 @@ const VideoView = () => {
       <table className="table" style={{ marginTop: 20 }}>
         <tbody>
           <tr>
-            <th width="20%">영상 번호</th>
+            <th width="20%">비디오 번호</th>
             <td colSpan="3">{videoDetail.videoNum}</td>
           </tr>
 
           <tr>
-            <th>영상 제목</th>
+            <th>비디오 제목</th>
             <td colSpan="3">{videoDetail.videoName}</td>
           </tr>
 

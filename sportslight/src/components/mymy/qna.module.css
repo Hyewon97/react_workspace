@@ -1,0 +1,25 @@
+.wrap {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.qnatitle {
+  font-size: 30px;
+  color: #ededed;
+  margin-bottom: 100px;
+  font-weight: bold;
+  position: relative;
+  top: 90px;
+}
+.content {
+  color: white;
+  border-bottom: 1px solid #888888;
+  padding: 10px;
+}
+.content:hover {
+  font-weight: bold;
+  background-color: #20995f;
+}

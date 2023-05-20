@@ -15,7 +15,7 @@ const VideoUpdate = () => {
     videoType: "",
     teamNum1: "",
     teamNum2: "",
-    seasonNum: "",
+    leagueNum: "",
   });
 
   const {
@@ -25,7 +25,7 @@ const VideoUpdate = () => {
     videoType,
     teamNum1,
     teamNum2,
-    seasonNum,
+    leagueNum,
   } = inputs;
 
   const video = useSelector((state) => state.video.videoDetail);
@@ -55,7 +55,7 @@ const VideoUpdate = () => {
     formData.append("videoType", videoType);
     formData.append("teamNum1", teamNum1);
     formData.append("teamNum2", teamNum2);
-    formData.append("seasonNum", seasonNum);
+    formData.append("leagueNum", leagueNum);
 
     formData.append("currentPage", pv.currentPage);
 
@@ -77,7 +77,7 @@ const VideoUpdate = () => {
       videoType: "",
       teamNum1: "",
       teamNum2: "",
-      seasonNum: "",
+      leagueNum: "",
     });
 
     // 글 수정 후 리스트로 이동
@@ -100,7 +100,7 @@ const VideoUpdate = () => {
         <table className="table" style={{ marginTop: 20 }}>
           <tbody>
             <tr>
-              <th width="20%">영상 제목</th>
+              <th width="20%">비디오 제목</th>
               <td colSpan="3">
                 <input
                   type="text"
@@ -130,7 +130,7 @@ const VideoUpdate = () => {
             </tr>
 
             <tr>
-              <th width="20%">영상 주소</th>
+              <th width="20%">비디오 주소</th>
               <td colSpan="3">
                 <input
                   type="text"
@@ -175,15 +175,15 @@ const VideoUpdate = () => {
             </tr>
 
             <tr>
-              <th width="20%">시즌 번호</th>
+              <th width="20%">리그 번호</th>
               <td colSpan="3">
                 <input
                   type="text"
-                  name="seasonNum"
-                  id="seasonNum"
+                  name="leagueNum"
+                  id="leagueNum"
                   style={{ width: "5%", height: "100%" }}
-                  defaultValue={video.seasonNum}
-                  value={seasonNum}
+                  defaultValue={video.leagueNum}
+                  value={leagueNum}
                   onChange={handleValueChange}
                 />
               </td>

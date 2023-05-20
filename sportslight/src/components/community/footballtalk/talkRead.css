@@ -1,0 +1,35 @@
+
+.talkReadAll {
+  background-color: black;
+  padding-top: 120px;
+}
+
+.talkReadCenter {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.titleTh {
+  border-right: 1px solid rgb(54, 54, 54);
+}
+
+.titleTd {
+  width: 500px;
+}
+
+.contentTd {
+  height: 400px;
+  text-align: initial;
+  padding-left: 20px;
+}
+
+.talkReadBtn {
+  background-color: black;
+  color: #888888;
+  font-size: 16px;
+  border: 1px solid #414141;
+  border-radius: 60px;
+  width: 60px;
+  font-weight: 500;
+  
+}

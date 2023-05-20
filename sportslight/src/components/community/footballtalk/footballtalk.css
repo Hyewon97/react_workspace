@@ -1,0 +1,118 @@
+
+/*커뮤니티 football Talk 게시글 목록 페이지*/
+.footballTalkAll {
+  background-color: black;
+  padding-top: 120px;
+}
+
+.footballTalkCenter {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.footballTable {
+  margin-top: 13px;
+  border-top: 1px solid #727070;
+  border-bottom: 2px solid #727070;
+}
+
+/*FOOTBALL TALK-게시판 전체 이름*/
+.footballTitle {
+  text-align: center;
+  font-size: xxx-large;
+}
+
+
+.footballArray {
+  display: flex;
+  margin-right: 4%;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ml-3 > select {
+  color: #fdfbfb;
+  font-size: initial;
+  background-color: #3585451f;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+  width: 100px;
+  height: 27px;
+  font-weight: 600;
+  outline: none;
+  margin-right: auto;
+  margin-left: 8%;
+}
+
+.btnGroup {
+  margin-left: 5px;
+  font-size: larger;
+}
+
+.btnGroup > button {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.footballTalkHeader :hover {
+  color: #17ad3589;
+}
+
+.footballTalkHeader > th:nth-child(2) {
+  width: 20px;
+}
+
+.footballTalkHeader > th:nth-child(3) {
+
+  display: block;
+  width: 600px;
+}
+
+.footballTalkHeader > th:nth-child(4) {
+  width: 80px;
+}
+
+.footballTalkHeader > th:nth-child(5) {
+  width: 30px;
+}
+.footballTalkHeader > th:nth-child(6) {
+  width: 20px;
+}
+
+.talkTableRows > td {
+  font-size: 15px;
+}
+
+.footballTalkLeague {
+  border-right: 1px solid #4c4a4a;
+  padding-right: 8px;
+}
+
+/*게시글 제목*/
+.footballTalkTitle {
+  text-align: inherit;
+  padding-left: 25px;
+}
+
+.footballTalkWrite {
+  margin-left: 1145px;
+  margin-top: 16px;
+}
+
+.TalkWrite {
+  background-color: black;
+  color: #c8c8c8;
+  padding: 6px 20px;
+  font-size: 16px;
+  border: 1px solid #414141;
+  border-radius: 60px;
+  width: 80px;
+  height: 40px;
+}
+
+.TalkWrite:hover {
+  border: 2px solid #888888;
+  color: #888888;
+}

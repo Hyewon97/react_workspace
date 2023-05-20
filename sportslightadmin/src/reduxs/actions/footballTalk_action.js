@@ -1,7 +1,7 @@
 import axios from "axios";
 import { baseURL } from "../../apiurl";
 import { footballTalkReducers } from "../reducers/footballTalk_reducer";
-//
+
 function getFootballTalkList(currentPage) {
   return async (dispatch) => {
     const data = await axios

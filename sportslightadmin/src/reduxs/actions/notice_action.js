@@ -1,7 +1,7 @@
 import axios from "axios";
 import { baseURL } from "../../apiurl";
 import { noticeReducers } from "../reducers/notice_reducer";
-//
+
 function getNoticeList(currentPage) {
   return async (dispatch) => {
     // 백엔드에 값 요청
@@ -48,14 +48,11 @@ function getNoticeUpdate(formData, config) {
   };
 }
 
-// 어디에 있는거를 호출하는지 이름으로 구분 가능하다. 어느 라이브러리에 있는 어느 함수인지
+// 라이브러리 등록 -> 외부에서 접근 가능
 export const noticeActions = {
   getNoticeList,
   getNoticeDetail,
   getNoticeDelete,
   getNoticeWrite,
   getNoticeUpdate,
-}; // 여기에 등록을 해주어야 외부에서 접근할 수 있음
-
-// 바로 호출할거면
-// export const getBoardList; // 이런 식으로 쓰는듯
+};

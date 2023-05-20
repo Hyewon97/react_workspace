@@ -10,9 +10,6 @@ const TableRow = (props) => {
 
   // 글 삭제
   const footballTalkReplydel = async () => {
-    // console.log(
-    //   "football list의 footballTalk.talkNum : " + footballTalkReply.memberNum
-    // );
     await axios.delete(
       `${baseURL}/admin/footballTalkReply/list/delete/${footballTalkReply.talkReplyNum}`
     );
@@ -36,7 +33,7 @@ const TableRow = (props) => {
           className="btn btn-outline-danger"
           onClick={footballTalkReplydel}
         >
-          글 삭제
+          삭제
         </button>
       </td>
     </tr>

@@ -1,5 +1,4 @@
 * {
-  /* background-color: bl; */
   color: black;
   font-size: 1.02rem;
 }
@@ -13,7 +12,6 @@
   color: black;
 }
 .linkStyle:hover {
-  /* text-decoration: none; */
   color: black;
 }
 

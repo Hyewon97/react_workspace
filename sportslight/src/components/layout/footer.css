@@ -1,0 +1,23 @@
+.footer {
+    text-align: center;
+    font-size: small;
+    background-color: black;
+  } 
+  
+  .footer-util{
+    border-top: 0.083rem solid #403e3e;
+    padding-top: 1.667rem;
+  }
+  
+  .footer-util ul li{
+    display: inline-block;
+  }
+  
+  .copyright{
+    margin-block-end: unset;
+    padding-bottom: 15px;
+  }
+  
+  .swiper-button-prev {
+    color: white;
+  }

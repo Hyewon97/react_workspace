@@ -4,10 +4,10 @@ let initialState = {
   footballTalkList: [],
   pv: { currentPage: 1 },
   footballTalkDetail: {},
-  currentTalkNum: null, // 비디오 넘값 받기 위해.. 공사중
+  currentTalkNum: null, // 비디오 넘 값 초기화
 };
 
-// state 값, 그 값을 받아서 처리해줄 함수를 설정한다.
+// state 값, 그 값을 받아서 처리해줄 함수를 설정
 const footballTalkSlice = createSlice({
   // 초기값 설정
   name: "footballTalk",

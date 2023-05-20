@@ -1,0 +1,58 @@
+
+.league {
+    padding-bottom: 10px;
+}
+
+
+.leagueWrapper{
+    background-color: black;
+    padding-top: 120px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 65px;
+    margin-bottom: 20px;
+}
+
+.title{
+    margin-bottom: 1px;
+    margin-left: 20px;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.leagueVideoList{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.logo2{
+    background-color: #171616;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.leagueName{
+    font-size: larger;
+    font-weight: 800;
+    padding-top: 9px;
+    display: inline-block;
+    padding-left: 26px;
+}
+
+.swiper-slide row_swiperSlide__Tkr81{
+    width: 250px;
+}
+
+/* league-wrapper .league .info .title {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1.43;
+    color: #ffffff;
+    word-break: keep-all;
+} */
+

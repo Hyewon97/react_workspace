@@ -39,7 +39,7 @@ const FootballTalkReplyList = () => {
         <colgroup>
           <col width="10%" />
           <col width="8%" />
-          <col width="8%" />
+          <col width="13%" />
           <col width="*%" />
           <col width="8%" />
           <col width="12%" />
@@ -49,7 +49,7 @@ const FootballTalkReplyList = () => {
           <tr>
             <th>게시판 번호</th>
             <th>댓글 번호</th>
-            <th>회원 번호</th>
+            <th>회원</th>
             <th>댓글 내용</th>
             <th>작성일자</th>
             <th></th>

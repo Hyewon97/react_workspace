@@ -31,19 +31,18 @@ const LoginPage = () => {
         let jwtAdminProfile = response.data.adminProfile;
         let jwtAdminEmail = response.data.adminEmail;
         let jwtAuthRole = response.data.authRole;
-        let jwtAdminNum = response.data.adminNum; // 저장소 공사중
+        let jwtAdminNum = response.data.adminNum;
 
         localStorage.setItem("Authorization", jwtToken);
         localStorage.setItem("adminEmail", jwtAdminEmail);
         localStorage.setItem("adminProfile", jwtAdminProfile);
         localStorage.setItem("authRole", jwtAuthRole);
-        localStorage.setItem("adminNum", jwtAdminNum); // 저장소 공사중
+        localStorage.setItem("adminNum", jwtAdminNum);
         localStorage.setItem("isLogin", "true");
 
         setInputs({ adminEmail: "", adminPass: "" });
       })
       .then((response) => {
-        // navigator('/');
         window.location.replace("/admin/notice/list/1");
       })
       .catch((err) => {

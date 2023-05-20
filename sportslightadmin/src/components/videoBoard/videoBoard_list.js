@@ -31,20 +31,20 @@ const VideoBoardList = () => {
     <div>
       <h3 className="text-center">한줄 게시판</h3>
       <Link className="btn btn-secondary" to="/admin/video/list/1">
-        영상 목록
+        비디오 목록
       </Link>
       <table className="table" style={{ marginTop: 80 }}>
         <colgroup>
           <col width="10%" />
           <col width="10%" />
-          <col width="10%" />
+          <col width="15%" />
           <col width="*%" />
           <col width="8%" />
         </colgroup>
 
         <thead>
           <tr>
-            <th>영상 번호</th>
+            <th>비디오 번호</th>
             <th>글 번호</th>
             <th>작성자</th>
             <th>내용</th>

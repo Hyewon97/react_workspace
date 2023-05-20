@@ -15,7 +15,6 @@ const videoSlice = createSlice({
 
   reducers: {
     getVideoList(state, action) {
-      // 데이터를 action이 받음. action.payload로 받음
       console.log(action);
       state.videoList = action.payload.data.aList;
       state.pv = action.payload.data.pv;

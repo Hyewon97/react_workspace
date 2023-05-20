@@ -1,0 +1,31 @@
+
+.swiperWrapper {
+  padding-left: 15px;
+}
+
+.swiperWrapper > div:nth-of-type(2), .swiperWrapper > div:nth-of-type(3) {
+  top: 110px;
+  right: 17px;
+  color: white;
+  opacity: 45%;
+  padding-left: 15px;
+}
+
+.swiperSlide {
+    width: 250px;
+    height: 300px;
+    padding-bottom: 0px;
+}
+
+.rowimg{
+    width: 100%;
+    height: 200px;
+    
+}
+
+.imgName{
+  padding-top: 15px;
+  width: 250px;
+  height: 10px;
+  padding-bottom: 0px;
+}

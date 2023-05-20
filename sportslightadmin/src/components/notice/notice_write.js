@@ -14,9 +14,6 @@ const NoticeWrite = () => {
 
   const { noticeTitle, noticeContent } = inputs;
 
-  // num 값 받아오기
-  // const { num } = useParams();
-
   const pv = useSelector((state) =>
     state.notice.pv ? state.notice.pv : { currentPage: 1 }
   );

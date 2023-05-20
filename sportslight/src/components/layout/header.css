@@ -1,0 +1,94 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 999;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav__black {
+  background-color: #131313f4;
+}
+
+.nav__logo {
+  position: fixed;
+  left: 40px;
+  width: 150px;
+  object-fit: contain;
+  padding-top: 10px;
+}
+
+.video {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_li {
+  padding-left: 180px;
+}
+
+.nav_li ul li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.nav_li ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+}
+
+.nav__user {
+  position: fixed;
+  right: 40px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.searchInput {
+  position: relative;
+  width: 200px;
+  color: #383737f4;
+  border: 0px;
+  margin-left: 650px;
+}
+
+.searchBar {
+  width: 80%;
+  border: 1px solid #a9a8a8;
+  opacity: 80%;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: black;
+}
+
+.userImg {
+  position: absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+  width: 38px;
+  padding-right: 70px;
+  top: -10px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+  width: 38px;
+  padding-right: 9px;
+  top: 10px;
+}

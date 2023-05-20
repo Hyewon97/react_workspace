@@ -53,16 +53,6 @@ const NoticeView = () => {
             <td colSpan="5">{noticeDetail.noticeTitle}</td>
           </tr>
 
-          {/* <tr>
-            <th>글 번호</th>
-            <td colSpan="5">{noticeDetail.noticeNum}</td>
-          </tr>
-
-          <tr>
-            <th>작성일자</th>
-            <td colSpan="5">{noticeDetail.writeDate}</td>
-          </tr> */}
-
           <tr>
             <th>내용</th>
             <td

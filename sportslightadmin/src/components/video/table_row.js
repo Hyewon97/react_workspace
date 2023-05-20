@@ -9,23 +9,10 @@ const TableRow = (props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // 링크를 눌렀을 때 해당되는 헌줄 게시판으로 이동되도록 임시 링크 설정
-  // const linkToComments = () => {
-  //   console.log("video list의 video.videoNum : " + video.videoNum); // 비디오 넘 값은 제대로 출력 됨
-  //   //window.location.href = `http://localhost:3000/admin/videoBoard/list/${video.videoNum}/1`;
-  // };
-
-  // const linkToComments = (videoNum) => {
-  //   console.log("video list의 video.videoNum : " + videoNum);
-  //   //window.location.href = `http://localhost:3000/admin/videoBoard/list/${videoNum}/1`;
-  // };
-
   const linkToComments = () => {
     console.log("video list의 video.videoNum : " + video.videoNum);
-    // dispatch(videoReducers.setCurrentVideoNum(video.videoNum));
 
     navigate(`/admin/videoBoard/list/${video.videoNum}/1`);
-    // window.location.reload();
   };
 
   return (
@@ -44,19 +31,9 @@ const TableRow = (props) => {
       </td>
 
       <td>
-        {/* <button className="btn btn-outline-danger" onClick={linkToComments}>
-          이동
-        </button> */}
-        {/* <button
-          className="btn btn-outline-danger"
-          onClick={() => linkToComments(video.videoNum)}
-        >
-          이동
-        </button> */}
         <button
           className="btn btn-outline-dark"
           onClick={linkToComments}
-          // style={{ marginTop: "55%" }}
           style={{ marginTop: "65px" }}
         >
           이동

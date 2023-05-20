@@ -1,4 +1,3 @@
-// 리덕스 툴킷을 이용해서 작업을 한다.
 import { createSlice } from "@reduxjs/toolkit";
 
 let initialState = {
@@ -24,7 +23,6 @@ const noticeSlice = createSlice({
       state.pv = action.payload.data.pv;
     },
 
-    //action에서 사용할 때 boardReducers.getBoardDetail 이렇게 사용할 수 있음
     getNoticeDetail(state, action) {
       state.noticeDetail = action.payload.data;
     },

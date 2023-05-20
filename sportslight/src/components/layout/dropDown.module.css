@@ -1,0 +1,30 @@
+.menu {
+  background: rgb(50, 50, 50);
+  border-radius: 8px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 235px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 100%;
+  /* transform: translateY(-20px); */
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  padding: 10px;
+  margin-right: 70px;
+}
+
+.dropMenu {
+  list-style: none;
+  top: 0;
+  left: 50%;
+  /* padding-right: 30px */
+  padding: 5px 15px 0px 15px;
+  color: darkgray;
+}
+
+.dropMenu > li {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 20px;
+}

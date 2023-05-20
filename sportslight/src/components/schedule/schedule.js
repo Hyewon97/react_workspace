@@ -1,9 +1,14 @@
-const Schedule = () => {
+import { Container } from 'reactstrap';
+import LeagueSelect from './leagueSelect';
+
+function Schedule() {
   return (
-    <div>
-      <p>오늘의 경기</p>
-    </div>
+    <>
+      <Container>
+        <LeagueSelect />
+      </Container>
+    </>
   );
-};
+}
 
 export default Schedule;

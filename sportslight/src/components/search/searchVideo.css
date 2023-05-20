@@ -1,0 +1,26 @@
+.searchResultWrapper {
+    display: flex;
+    margin: 0 auto;
+    min-height: 1000px;
+    min-width: 1500px;
+    padding-left: 50px;
+}
+
+.search-result {
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.search-result-item {
+    width: 250px;
+    height: 240px;
+    padding: 10px;
+}
+.search-result-item > img {
+    width: 100%;
+}
